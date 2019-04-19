@@ -7,3 +7,7 @@ build:
 
 clean:
 	-rm helloworld.exe
+
+test: build
+	./helloworld.exe
+
