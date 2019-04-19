@@ -1,9 +1,10 @@
 CXX=g++
+CXX_OPTIONS=-std=c++14 -O3
 
 all: build
 
 build:
-	${CXX} helloworld.cxx -o helloworld.exe
+	${CXX} ${CXX_OPTIONS} helloworld.cxx -o helloworld.exe
 
 clean:
 	-rm helloworld.exe
