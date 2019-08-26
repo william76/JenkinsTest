@@ -5,7 +5,10 @@ int main(int argc, char* argv[])
 {
     using namespace std;
 
-    cout << "Hello World!" << endl;
+    for(auto i=0; i < 10; i++)
+    {
+        cout << "Hello World!" << endl;
+    }
 
     return 0;
 }
