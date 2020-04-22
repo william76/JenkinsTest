@@ -1,6 +1,6 @@
 name: "Close stale issues"
 on:
-  watch
+  watch:
     types: [started]
     
   #schedule:
