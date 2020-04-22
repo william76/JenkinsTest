@@ -1,7 +1,10 @@
 name: "Close stale issues"
 on:
-  schedule:
-  - cron: "0 0 * * *"
+  watch
+    types: [started]
+    
+  #schedule:
+  #- cron: "0 0 * * *"
 
 jobs:
   stale:
