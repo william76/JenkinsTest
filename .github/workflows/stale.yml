@@ -1,19 +1,20 @@
-name: Mark stale issues and pull requests
-
+name: "Close stale issues"
 on:
   schedule:
-  - cron: "* * * * *"
+  - cron: "0 0 * * *"
 
 jobs:
   stale:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/stale@v1
+    - uses: actions/stale@v1.1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+        days-before-stale: 1
+        days-before-close: 2
         stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
+        stale-pr-message: 'Stale issue message'
         stale-issue-label: 'no-issue-activity'
+        exempt-issue-labels: 'awaiting-approval,work-in-progress'
         stale-pr-label: 'no-pr-activity'
+        exempt-pr-labels: 'awaiting-approval,work-in-progress'
