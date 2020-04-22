@@ -1,10 +1,11 @@
 name: "Close stale issues"
 on:
+  # For debugging: toggle action by starring/unstarring the repo
   watch:
     types: [started]
-    
-  #schedule:
-  #- cron: "0 0 * * *"
+  # Regular scheduling, run daily at 6AM Mountain time (12:00pm UTC)
+  schedule:
+  - cron: "0 12 * * *"
 
 jobs:
   stale:
@@ -13,11 +14,16 @@ jobs:
     - uses: actions/stale@v1.1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+        # Number of days of inactivity before marking an issue or PR stale
         days-before-stale: 1
-        days-before-close: 2
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale issue message'
+        # Number of days of inactivity after marking stale before closing the issue or PR
+        days-before-close: 1
+        # Message for marking issues and PR's.
+        stale-issue-message: 'This issue has been marked as STALE due to inactivity for XX days. It will be closed in YY days unless the flag is cleared.'
+        stale-pr-message: 'This PR has been marked as STALE due to inactivity for XX days. It will be closed in YY days unless the flag is cleared.'
+        # 'STALE' label to use.
         stale-issue-label: 'no-issue-activity'
-        exempt-issue-labels: 'awaiting-approval,work-in-progress'
         stale-pr-label: 'no-pr-activity'
+        # Flags that exempt issues and PRs from this check.
+        exempt-issue-labels: 'awaiting-approval,work-in-progress'
         exempt-pr-labels: 'awaiting-approval,work-in-progress'
