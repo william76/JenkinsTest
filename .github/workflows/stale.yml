@@ -7,6 +7,9 @@ on:
   schedule:
   - cron: "0 12 * * *"
 
+# See https://github.com/actions/stale/blob/master/action.yml for information on actions 
+# that GitHub knows for stale issues.
+
 jobs:
   stale:
     runs-on: ubuntu-latest
