@@ -28,8 +28,8 @@ jobs:
         stale-issue-label: 'Inactive Issue / Stale'
         stale-pr-label: 'Inactive PR / Stale'
         # Flags that exempt issues and PRs from this check.
-        exempt-issue-labels: 'Awaiting Review,Prioritized,Bug'
-        exempt-pr-labels: 'Awaiting Review,Work in Progress'
+        exempt-issue-labels: 'Needs Review,Prioritized,Bug'
+        exempt-pr-labels: 'Needs Review,Work in Progress,Prioritized'
 
 
 
