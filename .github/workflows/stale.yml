@@ -22,7 +22,12 @@ jobs:
         # Number of days of inactivity after marking stale before closing the issue or PR
         days-before-close: 1
         # Message for marking issues and PR's.
-        stale-issue-message: 'This issue has been marked as STALE due to inactivity for XX days. It will be closed in YY days unless the flag is cleared.'
+        stale-issue-message: >
+          This issue has been marked as STALE due to inactivity for XX days. 
+          It will be closed in YY days unless the flag is cleared.
+          
+          Please post a comment and remove the STALE FLAG to prevent auto-closure
+          of this issue.
         stale-pr-message: 'This PR has been marked as STALE due to inactivity for XX days. It will be closed in YY days unless the flag is cleared.'
         # 'STALE' label to use.
         stale-issue-label: 'Inactive Issue / Stale'
