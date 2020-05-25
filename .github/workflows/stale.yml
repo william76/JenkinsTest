@@ -38,7 +38,7 @@ jobs:
         exempt-issue-labels: 'Needs Review,Prioritized,Bug'
         exempt-pr-labels: 'Needs Review,Work in Progress,Prioritized'
         # Remove stale labels from issues when they are updated or commented on.
-        remove-stale-when-updated: true
+        #remove-stale-when-updated: true
 
 
 
